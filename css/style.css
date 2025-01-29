@@ -1,0 +1,113 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.todo_list {
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.container {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.row {
+    width: 100% !important;
+    margin: auto;
+    padding: 0px;
+}
+
+.todo_body {
+    width: 100%;
+    padding: 0px !important;
+}
+
+.todo_body h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo_item,
+.todo_date,
+.todo_btn {
+    width: 100%;
+}
+
+.add_btn {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    border: none;
+    background-color: #02580F;
+    color: #fff;
+}
+
+.add_btn:focus {
+    outline: none !important;
+}
+
+.todo_item input,
+.todo_date input {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #333;
+    border-radius: 0px;
+    background-color: #fff;
+}
+
+.todo_container .row {
+    padding: 5px 0px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.todo_container button {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    border: none;
+    background-color: #600001;
+    color: #fff;
+}
+
+.todo_item,
+.todo_date,
+.todo_btn {
+    padding: 0px 3px;
+}
+
+.todo_container input {
+    border: none !important;
+}
+
+.empty-message {
+    margin-top: 20px;
+}
+
+.thanks h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}

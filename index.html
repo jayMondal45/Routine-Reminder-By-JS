@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff5733">
+    <title>Routine Reminder By JS</title>
+
+    <!--------========= Bootstrap 4 CSS =============------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <!------============== Custom CSS ===========------------->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <!--------============= Google Fonts ================-------------->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+    <!-------========= Font Awesome 6 Cdn =========------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="todo_list">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 todo_body">
+                    <h1>🌟 Enter Your Routine 🌟</h1>
+                    <div class="row">
+                        <div class="col-5 todo_item">
+                            <input type="text" placeholder="Enter Task 📝" id="todo_task" required />
+                        </div>
+                        <div class="col-5 todo_date">
+                            <!-- Custom time picker display -->
+                            <div class="custom-time" id="customTimePicker">
+                                <input type="text" placeholder="Set Time ⏰" id="displayText" required readonly>
+                            </div>
+
+                            <!-- Actual time input field (hidden) -->
+                            <input type="time" id="todo_time" placeholder="Enter Time" class="form-control"
+                                style="display: none;">
+                        </div>
+                        <div class="col-2 todo_btn">
+                            <button id="add_button" class="add_btn">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="padding: 0px">
+                            <div class="todo_container"></div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-12 thanks">
+                            <h2>Thanks for using this! 😊</h2>
+                            <h2>Hope it helps you stay on top of your tasks effortlessly! ✅</h2>
+                            <h2>Design & Developed By - <a href="https://jaymondal45.github.io/My-Portfolio/">Jay
+                                    Mondal</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------============ Bootstrap 4 JS ===========------------>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!--------------============ Custom JS ======-------------->
+    <script src="js/todo.js"></script>
+
+    <script>
+        const customTimePicker = document.getElementById("customTimePicker");
+        const displayText = document.getElementById("displayText");
+        const timeInput = document.getElementById("todo_time");
+
+        // Open time picker when the custom div is clicked
+        customTimePicker.addEventListener("click", () => {
+            timeInput.showPicker();
+        });
+
+        // Update the display text when the user selects a time
+        timeInput.addEventListener("change", () => {
+            if (timeInput.value) {
+                displayText.textContent = timeInput.value;
+                displayText.style.color = "black"; // Change color after selection
+            }
+        });
+    </script>
+</body>
+
+</html>
